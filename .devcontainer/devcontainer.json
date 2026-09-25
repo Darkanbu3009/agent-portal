@@ -1,0 +1,10 @@
+{
+  "name": "AI Agent Portal",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:22",
+  "forwardPorts": [5173, 4000],
+  "portsAttributes": {
+    "5173": { "label": "Web (React)", "onAutoForward": "openBrowser" },
+    "4000": { "label": "API (Express)", "onAutoForward": "silent" }
+  },
+  "postCreateCommand": "cd server && npm install && cd ../web && npm install"
+}
